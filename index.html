@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yuli</title>
+    <meta charset="UTF-8">
+    <script src="main.css"></script>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    body {
+        background: #000000;
+    }
+
+    .contenedor {
+        margin: auto;
+        width: 100%;
+        margin-top: 23%;
+        text-align: center;
+    }
+
+    .titulo {
+        color: #ffffff;
+    }
+
+    .opciones p {
+        background: #4205ab;
+        display: initial;
+        padding: 2%;
+        color: #ffffff;
+        border-radius: 20%;
+        border-color: #ffffff;
+        font-weight: bold;
+    }
+
+    p.p1 {
+        position: absolute;
+        top: 45%;
+        left: 35%;
+        width: 7%;
+    }
+
+    p.p2 {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 15%;
+    }
+
+    #si {
+        background: #260079;
+        left: 25%;
+        position: absolute;
+        top: 20%;
+        width: 60%;
+        color: #ffffff;
+        display: none;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".p1").hover(function () {
+            arriba = Math.random() * (400 - 1) + 1;
+            abajo = Math.random() * (609 - 1) + 1;
+            $(this).css("top", arriba);
+            $(this).css("left", abajo);
+        });
+    });
+    function dijoSi() {
+        document.getElementById("si").style.display = "block";
+    }
+</script>
+
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>¿QUIERES SER MI NOVIA?</h1>
+        </div>
+        <div class="opciones">
+            <p class="p1">NO</p>
+            <p onclick="dijoSi()" class="p2">SI</p>
+            <div id="si">
+                <img src="Memecorazon.jpg" width="70%">
+                <h2>Gracias baby, lo sabía. Feliz primer día de novios ^</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
