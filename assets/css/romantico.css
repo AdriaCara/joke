@@ -52,6 +52,7 @@
 img.loveu{
   height:60vh;
   width:auto;
-  border-radius calc(15px+1%);
+  border-radius: calc(15px+1%);
+  
   
 }
